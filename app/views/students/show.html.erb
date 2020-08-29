@@ -1,0 +1,16 @@
+<h1>Student Info</h1>
+<table>
+    <tr>
+        <td>Name</td>
+        <td>:<%= @student.name %></td>
+    </tr>
+    <tr>
+        <td>Mod</td>
+        <td>:<%= @student.mod %></td>
+    </tr>
+    <tr>
+        <td>Ducks</td>
+        <td>:<% @student.ducks.each do |duck| %><%= link_to duck.name, duck_path(duck)%><br><% end %></td>
+    </tr>
+
+</table>

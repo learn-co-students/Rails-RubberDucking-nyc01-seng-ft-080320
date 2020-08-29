@@ -1,0 +1,33 @@
+<h1>Update Student</h1>
+
+<div>
+    <table>
+        <%= form_for @student do |f|  %>
+        <tr>
+            <td>
+                <%= f.label :name %>
+            </td>
+            <td>
+                <%= f.text_field :name %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= f.label :mod %>
+            </td>
+            <td>
+                <%= f.text_field :mod %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                <%= f.submit %>
+            </td>
+        </tr>
+
+        <% end %>
+    </table>
+</div>

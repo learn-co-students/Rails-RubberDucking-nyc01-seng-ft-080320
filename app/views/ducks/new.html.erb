@@ -1,0 +1,41 @@
+<h1>Create New Duck:</h1>
+
+<div>
+    <table>
+        <%= form_for @duck do |f|  %>
+        <tr>
+            <td>
+                <%= f.label :name %>
+            </td>
+            <td>
+                <%= f.text_field :name %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= f.label :description %>
+            </td>
+            <td>
+                <%= f.text_area :description %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= f.label :student %>
+            </td>
+            <td>
+                <%= f.collection_select :student_id, Student.all, :id, :name %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                <%= f.submit %>
+            </td>
+        </tr>
+
+        <% end %>
+    </table>
+</div>
