@@ -1,0 +1,13 @@
+<%= form_for(@student) do |f| %>
+    <p>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    </p>
+
+    <p>
+        <%= f.label :mod %>
+        <%= f.number_field :mod %>
+    </p>
+
+    <%= f.submit %>
+<% end %>
