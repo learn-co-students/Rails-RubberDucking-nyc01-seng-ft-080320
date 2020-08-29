@@ -1,0 +1,5 @@
+<h1><%= @duck.name.titlecase %></h1>
+<ul>
+    <li>Student Name: <%= link_to @duck.student.name, student_path(@duck.student) %></li>
+    <li><%= @duck.name.titlecase %> Description: <%= @duck.description %></li>
+</ul>
