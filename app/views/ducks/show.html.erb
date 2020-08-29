@@ -3,3 +3,4 @@
     <li>Student Name: <%= link_to @duck.student.name, student_path(@duck.student) %></li>
     <li><%= @duck.name.titlecase %> Description: <%= @duck.description %></li>
 </ul>
+<%= button_to "duck index", ducks_path , method: :get %>
