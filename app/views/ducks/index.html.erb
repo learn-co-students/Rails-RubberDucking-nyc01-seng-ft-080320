@@ -2,6 +2,7 @@
 
 <ul>
   <% @ducks.each do |duck| %>
-    <li> <%= duck.name %> </li>
+    <li> <%= duck.name %> </li><br>
+    <%= button_to "Delete", duck_path(duck), method: :delete %>
   <% end %>
 </ul>

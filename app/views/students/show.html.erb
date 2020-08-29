@@ -1,0 +1,16 @@
+<h1><%= @student.name %></h1>
+<h3>Currently in:</h3>
+<%= @student.mod %>
+
+<h3><%= @student.name %>'s ducks include:</h3>
+
+<table>
+<th>Ducks</th>
+<% @student.ducks.each do |duck| %>
+    <tr>
+        <td><%= link_to duck.name, duck_path(duck) %></td>
+    </tr>
+    <% end %>
+
+</table>
+

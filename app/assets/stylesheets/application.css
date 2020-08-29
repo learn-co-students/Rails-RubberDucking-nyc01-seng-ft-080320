@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+ li {
+     padding: 5px;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+table {  
+  font-family:sans-serif;
+  border: blue 1 px solid;
+}
+
+th {
+      border: 1px red solid;
+      
+}
+
+td {
+    border: 1px blue solid;
+}
+
+a:hover {
+    font-size: 18px;
+    color: orange;
+    transform
+}
