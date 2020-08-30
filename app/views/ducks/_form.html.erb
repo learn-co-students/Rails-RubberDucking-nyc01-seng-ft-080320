@@ -1,0 +1,27 @@
+<% if @duck.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@duck.errors.count, "error") %>
+      prohibited this student from being saved:
+    </h2>
+ 
+    <ul>
+    <% @duck.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @duck do |f| %>
+  <%= f.label "Name:" %>
+  <%= f.text_field :name %><br>
+
+  <%= f.label "Description:" %>
+  <%= f.text_area :description %><br>
+  
+  <%= f.label "Belongs to:" %>
+  <%= f.collection_select :student_id, Student.all, :id, :name %><br>
+
+  <%= f.submit %>
+<% end %>

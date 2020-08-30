@@ -1,0 +1,15 @@
+<h1><%= @student.name %></h1>
+
+<p>Mod <%= @student.mod %></p>
+
+<% if @student.ducks.length > 0 %>
+  <p>Ducks owned by <%= @student.name %>:</p>
+  <% @student.ducks.each do |duck| %>
+    <%= link_to duck.name, duck_path(duck) %><br>
+  <% end %>
+<% else %>
+  <p><%= @student.name %> doesn't own any ducks yet!</p>
+<% end %>
+
+
+<p><%= link_to "Change Name", edit_student_path(@student) %></p>

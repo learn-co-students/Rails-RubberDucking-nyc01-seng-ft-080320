@@ -1,0 +1,7 @@
+<h1><%= @duck.name %></h1>
+
+<p><%= @duck.description %></p>
+
+<p>I belong to: <%= link_to @duck.student.name, student_path(@duck.student) %></p>
+
+<p><%= link_to "Edit This Duck", edit_duck_path(@duck) %></p>
