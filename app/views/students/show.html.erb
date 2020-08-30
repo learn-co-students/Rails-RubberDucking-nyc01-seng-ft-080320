@@ -1,0 +1,21 @@
+<h1>This is a cool student:</h1>
+
+
+Name:<br>
+<h3><%= @student.name %></h3>
+
+Mod:<br>
+<h3><%= @student.mod %></h3>
+
+Ducks Owned:<br>
+<ul><% @student.ducks.each do |duck| %>
+    <h3><li><%= link_to(duck.name, duck_path(duck)) %></li></h3>
+    <% end %>
+</ul>
+
+<h3>Edit Student:</h3>
+<%= button_to("Edit", edit_student_path, method: :get) %>
+<h3>Back to Index:</h3>
+<%= button_to("Index", students_path, method: :get) %>
+<h3>Delete Student:</h3>
+<%= button_to("Delete User", student_path(@student), method: :delete) %>

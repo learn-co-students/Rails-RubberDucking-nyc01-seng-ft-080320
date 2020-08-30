@@ -1,0 +1,18 @@
+<h1>This is a cool duck:</h1>
+
+
+Name:<br>
+<h3><%= @duck.name %></h3>
+
+Description:<br>
+<h3><%= @duck.description %></h3>
+
+Owner:<br>
+<h3><%= link_to(@duck.student.name, student_path(@duck.student)) %></h3>
+
+<h3>Edit Duck:</h3>
+<%= button_to("Edit Duck", edit_duck_path, method: :get) %>
+<h3>Back to Index:</h3>
+<%= button_to("Index of Ducks", ducks_path, method: :get) %>
+<h3>Delete Duck:</h3>
+<%= button_to("Delete Duck", duck_path(@duck), method: :delete) %>
