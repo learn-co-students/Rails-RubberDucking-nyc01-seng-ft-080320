@@ -1,0 +1,17 @@
+
+
+<%= form_for @duck do |f| %>
+<b><%= f.label :name %><b><br>
+<%= f.text_field :name %><br>
+<br>
+<%= f.label :description %><br>
+<%= f.text_area :description %><br>
+<br>
+<%= f.collection_select :student_id, Student.all, :id, :name%><br>
+<br>
+<%= f.submit%>
+<% end %><br>
+<br>
+<br>
+<%= button_to "Nevermind, take me back to the Ducks", ducks_path, method: :get%>
+

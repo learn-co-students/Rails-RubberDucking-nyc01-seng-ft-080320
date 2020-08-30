@@ -1,0 +1,8 @@
+<h1><%= @duck.name %>'s page</h1>
+<%= link_to "Back to all the Ducks", ducks_path %>
+<hr>
+
+<b><%= @duck.name %>'s description: <%= @duck.description %></b><br>
+<br>
+<p><%= button_to "Edit This Duck", edit_duck_path(@duck), method: :get%></p>
+<p><%= button_to "Back to the Ducks", ducks_path, method: :get%></p>

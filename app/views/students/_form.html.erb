@@ -1,0 +1,12 @@
+<%= form_for @student do |f| %>
+<b><%= f.label :name %>:<b>
+<br>
+<b><%= f.text_field :name %><b><br>
+<br>
+<b><%= f.label :mod %>:<b><br>
+<b><%= f.text_field :mod %><b><br>
+<br>
+<%= f.submit%>
+<% end %><br>
+<br>
+<%= button_to "Nevermind. Back to students, please!", students_path, method: :get %>

@@ -1,7 +1,10 @@
 <h1>These are some cool duckys:</h1>
+<p> <%= button_to "Check out the Students!", students_path, method: :get %> </p>
+<p> <%= button_to "Make a new Ducky!", new_duck_path, method: :get %> </p>
+<hr>
 
 <ul>
   <% @ducks.each do |duck| %>
-    <li> <%= duck.name %> </li>
+    <li> <%= link_to duck.name, duck_path(duck) %> </li><br>
   <% end %>
 </ul>

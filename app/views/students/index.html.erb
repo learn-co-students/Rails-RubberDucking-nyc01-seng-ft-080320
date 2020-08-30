@@ -1,7 +1,13 @@
 <h1>These are some cool students:</h1>
-
+<b><%= button_to "Check out the Ducks!", ducks_path, method: :get%></b><br>
+<br>
+<b><%= button_to "New Student? Create your profile!", new_student_path, method: :get%></b>
+<hr> 
 <ul>
-  <% @students.each do |student| %>
-    <li> <%= student.name %> </li>
+  <% @students.each do |stu| %><br>
+    <li> <%= link_to stu.name, student_path(stu) %>, Module <%= stu.mod%> </li>
   <% end %>
 </ul>
+
+
+<!-- link_to stu.name creates HTML code for hyperlink; students_path(stu) sends user to the #show page of that particular student instance (stu)-->

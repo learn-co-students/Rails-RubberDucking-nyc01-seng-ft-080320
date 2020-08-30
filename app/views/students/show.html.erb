@@ -1,0 +1,11 @@
+<h1><%= @student.name %></h1>
+<h2>Module <%= @student.mod %></h2>
+<hr> 
+
+<p><b><%= @student.name %></b> owns: <%= @student.ducks.count %> ducks!</p>
+
+<%= button_to "Edit this Student", edit_student_path(@student), method: :get %><br>
+<br>
+<%= button_to "Delete this Student", student_path(@student), method: :delete %><br>
+<br>
+<%= button_to "Back to Students", students_path, method: :get %>
