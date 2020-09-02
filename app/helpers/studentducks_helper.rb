@@ -1,0 +1,2 @@
+module StudentducksHelper
+end

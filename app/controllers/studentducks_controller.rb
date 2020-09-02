@@ -1,0 +1,2 @@
+class StudentducksController < ApplicationController
+end

@@ -1,12 +1,8 @@
 class Duck < ApplicationRecord
-    belongs_to :student, class_name: "Student", foreign_key: "student_id"
-    validates :name, presence: :true
-    validates :description, presence: :true
-    validates :student_id, numericality: {greater_than: 0, less_than: Student.all.count}
+    has_many :studentducks
+    has_many :ducks, through: :studentducks
 
-    def my_owners
-        Student.all.select {|student| student.id == self.student_id}
-    end
+    validates :name, uniqueness: true
+    validates :name, presence: true
+
 end
-
-

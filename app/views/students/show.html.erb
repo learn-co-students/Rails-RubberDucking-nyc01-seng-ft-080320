@@ -1,12 +1,15 @@
-<h1> <%= @student.name %></h1>
-<h4>Mod: <%= @student.mod %></h4>
+<h1><%= @student.name %></h1>
 
-<h2>Ducks:</h2>
 
 <div>
     <ul>
-        <% @student.my_ducks.each do |duck|%>
-            <li><%= duck.name %></li>
+        <% @student.ducks.each do |duck| %>
+        <li><%= duck.name %></li>
         <% end %>
     </ul>
+</div>
+
+<%# Delete button %>
+<div>
+    <%= button_to "Delete Student", student_path(@student), method: :delete %>
 </div>

@@ -1,14 +1,12 @@
 <h1><%= @duck.name %></h1>
 
-<h3>Description:</h3>
-<%= @duck.description %>
-
-<h3>Belongs to:</h3>
+<h3> Breed:</h3>
 
 <div>
-    <ul>
-        <% @duck.my_owners.each do |owner| %>
-            <li><%= owner.name %></li>
-        <% end %>
-    </ul>
+    <%= @duck.description %>
+</div>
+
+<%# Delete button %>
+<div>
+    <%= button_to "Delete Duck", duck_path(@duck), method: :delete %>
 </div>

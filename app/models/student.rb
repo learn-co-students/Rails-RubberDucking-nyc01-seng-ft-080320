@@ -1,12 +1,7 @@
 class Student < ApplicationRecord
-    has_many :ducks, class_name: "Duck", foreign_key: "reference_id"
-    validates :name, presence: :true
-    validates :mod, numericality: {greater_than: 0, less_than: 6}
+    has_many :studentducks
+    has_many :ducks, through: :studentducks
 
-
-    def my_ducks
-        Duck.all.select {|duck| duck.student_id == self.id}
-    end
-
+    validates :mod, numericality: {greater_than_or_equal_to: 1, less_than_or_equal_to: 5 }
+    validates :name, uniqueness: true
 end
-
